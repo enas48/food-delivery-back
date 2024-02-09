@@ -2,10 +2,10 @@ import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { DataSource, DataSourceOptions } from "typeorm";
 require("dotenv").config();
-let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD ,PGPORT} = process.env;
+let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, PGPORT } = process.env;
 
 export const dataSourceOptions: DataSourceOptions = {
-  type: "postgres",
+  type: 'postgres',
   host: PGHOST,
   port: Number(PGPORT),
   username: PGUSER,
